@@ -1,0 +1,8 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BlueSky Wi-Fi</title><style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#eef5fa;font:16px system-ui;color:#123049}main{background:white;padding:36px;border-radius:24px;max-width:400px;margin:20px}h1{color:#008cc6}p{line-height:1.6}a{display:block;text-align:center;background:#007daf;color:white;padding:15px;border-radius:12px;text-decoration:none}small{display:block;margin-top:20px;color:#526777}</style></head><body><main><h1>BlueSky Coffee</h1><h2>Welcome to our Wi-Fi</h2><p>Continue to verify your email securely.</p><a id="continue" href="#">Continue with email</a><small id="note">OTP test. Wi-Fi internet authorization is pending.</small></main><script>
+// Replace with your deployed Google Apps Script /exec URL. No secrets here.
+const APPS_SCRIPT_URL='PASTE_YOUR_APPS_SCRIPT_EXEC_URL_HERE';
+const link=document.getElementById('continue');
+if(/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(APPS_SCRIPT_URL)){link.href=APPS_SCRIPT_URL;}else{link.addEventListener('click',e=>{e.preventDefault();document.getElementById('note').textContent='Administrator: configure APPS_SCRIPT_URL in index.html first.';});}
+// Linksys parameters are deliberately not forwarded until its supported
+// authentication protocol and session validation have been verified.
+</script></body></html>
